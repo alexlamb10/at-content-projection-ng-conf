@@ -1,0 +1,16 @@
+<p>
+  <button (click)="showPopup = true">Show pop-up</button>
+
+  <app-popup-window
+    [isOpen]="showPopup"
+    title="Test pop-up"
+    (onClose)="popupClosed($event)"
+  >
+    <div body>
+      This is the content of the pop-up (thanks to content projection)
+    </div>
+    <div footer>
+      <button>Ok</button>
+    </div>
+  </app-popup-window>
+</p>
